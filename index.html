@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Leave Us a Google Review</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -51,16 +51,17 @@
     }
   </style>
 </head>
+
 <body>
 
 <div class="container">
 
-  <!-- LOGO -->
-  <img src="logo with tagline.png" alt="StayFinder Logo" class="logo"★</div>
+  logo.png
+
+  <div class="stars">★★★★★</div>
   <h2>Loved our service?</h2>
   <p>Scan the QR code below to leave us a Google Review</p>
 
-  <!-- CAMERA -->
   <video id="video"></video>
 
   <p style="margin-top:10px;font-size:12px;">
@@ -69,15 +70,17 @@
 
 </div>
 
-<!-- SCRIPT FILE -->
-<script src="qr-scanner.min
+<!-- QR Scanner Library -->
+qr-scanner.min.jsscript>
+
 <script>
+  QrScanner.WORKER_PATH = 'qr-scanner-worker.min.js';
+
   const video = document.getElementById('video');
 
   const scanner = new QrScanner(
     video,
     result => {
-      // Always open YOUR review page
       window.location.href = "https://g.page/r/CeMHJoedcYeYEAE/review";
       scanner.stop();
     },
