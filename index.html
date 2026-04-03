@@ -50,10 +50,16 @@
       margin: 10px 0;
     }
 
-    a {
+    a.review-link {
+      display: inline-block;
+      margin-top: 8px;
       color: #1a73e8;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+    }
+
+    a.review-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -73,10 +79,16 @@
   <!-- QR CODE IMAGE -->
   <img src="review-qr.png" alt="Google Review QR Code" class="qr">
 
-  <!-- CLICKABLE LINK (for mobile users) -->
+  <!-- CLICKABLE LINK -->
   <p>
     Or tap here:<br>
-    Leave a Google Review
+    <a
+      class="review-link"
+      href="https://g.page/r/CeMHJoedcYeYEAE/review"
+      target="_blank"
+    >
+      Leave a Google Review
+    </a>
   </p>
 
   <p style="margin-top:14px;font-size:12px;">
@@ -87,3 +99,4 @@
 
 </body>
 </html>
+``
