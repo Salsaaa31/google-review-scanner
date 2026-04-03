@@ -2,52 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Scan to Leave a Google Review</title>
+  <title>Leave Us a Google Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
       background: #f5f5f5;
+      text-align: center;
       padding: 20px;
     }
-    h1 {
+
+    .container {
+      max-width: 420px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    img.logo {
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 10px 0;
       color: #333;
     }
-    video {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 12px;
-      border: 2px solid #ccc;
-      margin-top: 20px;
-    }
+
     p {
       color: #666;
+      font-size: 14px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+      border: 2px solid #ddd;
+    }
+
+    .stars {
+      font-size: 22px;
+      color: #f4b400;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
 
-<h1>Scan QR Code</h1>
-<p>Scan to open Google Review page</p>
+<div class="container">
 
-<video id="video"></video>
+  <!-- LOGO -->
+  <img src="logowithtagline.png" alt="StayFinder Logo" class="logo"★</div>
+  <h2>Loved our service?</h2>
+  <p>Scan the QR code below to leave us a Google Review</p>
 
-<script src="qr-scanner.min.js"></script>
+  <!-- CAMERA -->
+  <video id="video"></video>
+
+  <p style="margin-top:10px;font-size:12px;">
+    Thank you for supporting us 💙
+  </p>
+
+</div>
+
+<!-- SCRIPT FILE -->
+<script src="qr-scanner.min
 <script>
   const video = document.getElementById('video');
 
   const scanner = new QrScanner(
     video,
     result => {
-      // ✅ Directly open YOUR Google Review link
+      // Always open YOUR review page
       window.location.href = "https://g.page/r/CeMHJoedcYeYEAE/review";
       scanner.stop();
     },
     {
       highlightScanRegion: true,
-      highlightCodeOutline: true,
+      highlightCodeOutline: true
     }
   );
 
