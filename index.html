@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scan to Leave a Google Review</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    video {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      border: 2px solid #ccc;
+      margin-top: 20px;
+    }
+    p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Scan QR Code</h1>
+<p>Scan to open Google Review page</p>
+
+<video id="video"></video>
+
+<script src="qr-scanner.min.js"></script>
+<script>
+  const video = document.getElementById('video');
+
+  const scanner = new QrScanner(
+    video,
+    result => {
+      // ✅ Directly open YOUR Google Review link
+      window.location.href = "https://g.page/r/CeMHJoedcYeYEAE/review";
+      scanner.stop();
+    },
+    {
+      highlightScanRegion: true,
+      highlightCodeOutline: true,
+    }
+  );
+
+  scanner.start();
+</script>
+
+</body>
+</html>
